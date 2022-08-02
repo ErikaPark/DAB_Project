@@ -5,16 +5,11 @@ from st_aggrid import AgGrid
 from st_aggrid import grid_options_builder
 import helper_functions 
 import io
-import matplotlib.pyplot as plt
-from matplotlib import rc
 
 from io import BytesIO
 from google.oauth2 import service_account
 from google.cloud import storage
 
-font_name = 'AppleGothic'
-rc('font', family='AppleGothic')
-plt.rcParams['axes.unicode_minus'] = False
 
 
 # #google cloud 사용해서 데이터 받아옴
