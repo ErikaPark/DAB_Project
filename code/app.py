@@ -1,4 +1,4 @@
-from st_on_hover_tabs import on_hover_tabs
+from streamlit_option_menu import option_menu
 import streamlit as st
 from window1 import Window1
 from window2 import Window2
@@ -25,23 +25,8 @@ def initialize():
 
         with st.sidebar:
                 st.header('DAB 경진대회: 지하철 길찾기')
-                st.session_state['choose'] = on_hover_tabs( tabName=['데이터 보기','EDA', '길찾기(기본)', '길찾기(휠체어)'], 
-                             iconName=['journal', 'journal', 'train', 'bi-battery-charging'],
-                             styles = {'navtab': {'background-color':'#111',
-                                                  'color': '#818181',
-                                                  'font-size': '18px',
-                                                  'transition': '.3s',
-                                                  'white-space': 'nowrap',
-                                                  'text-transform': 'uppercase'},
-                                       'tabOptionsStyle': {':hover :hover': {'color': 'red',
-                                                                      'cursor': 'pointer'}},
-                                       'iconStyle':{'position':'fixed',
-                                                    'left':'7.5px',
-                                                    'text-align': 'left'},
-                                       'tabStyle' : {'list-style-type': 'none',
-                                                     'margin-bottom': '30px',
-                                                     'padding-left': '30px'}},
-                             key="1")
+                st.session_state['choose'] = option_menu( "지하철 길찾기", ['데이터 보기','EDA', '길찾기(기본)', '길찾기(휠체어)'], 
+                             icons=['journal', 'journal', 'train', 'bi-battery-charging'])
 
 
 if __name__=="__main__":
