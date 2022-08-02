@@ -10,15 +10,15 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 
 
-font_name = 'AppleGothic'
-rc('font', family='AppleGothic')
-plt.rcParams['axes.unicode_minus'] = False
+# font_name = 'AppleGothic'
+# rc('font', family='AppleGothic')
+# plt.rcParams['axes.unicode_minus'] = False
 
 
 
 def initialize():
         st.set_page_config(layout="wide")
-        st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
+       # st.markdown('<style>' + open('./style.css').read() + '</style>', unsafe_allow_html=True)
         if 'df' not in st.session_state:
                 st.session_state['df'] = False
         #st.session_state['1_8역간거리'] = pd.read_csv("../data/서울교통공사_1-8호선 역간거리 및 소요시간_20220111.csv",encoding='cp949',index_col=0)
