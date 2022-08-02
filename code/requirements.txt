@@ -6,3 +6,4 @@ streamlit-option-menu == 0.3.2
 google-cloud-storage == 2.4.0
 openpyxl == 3.0.9
 networkx == 2.6.3
+Matplotlib == 3.5.2
